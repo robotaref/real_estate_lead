@@ -9,7 +9,7 @@ import streamlit as st
 from audio_recorder_streamlit import audio_recorder
 
 client = openai.OpenAI(
-    api_key=""
+    api_key=st.secrets["API_KEY"]
 )
 CLIENT_NAME_PROMPT = "Name of the client that visited the house. If they mention someone's name, in the conversation as  use that."
 STATE_PROMPT = "State of the visit."
